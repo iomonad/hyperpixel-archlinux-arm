@@ -25,10 +25,6 @@ dtoverlay=hyperpixel-gpio-backlight
 EOF
 }
 
-#
-# POST INSTALL
-#
-
 function post_install () {
     # update kernel parameters
     install_kernel_params
@@ -41,18 +37,10 @@ function post_install () {
     echo "/!\ Kernel Reboot needed to get device working /!\ "
 }
 
-#
-# POST UPGRADE
-#
-
 function post_upgrade () {
     install_kernel_params
     systemctl daemon-reload
 }
-
-#
-# PRE REMOVE
-#
 
 function pre_remove () {
     systemctl disable hyperpixel-init

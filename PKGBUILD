@@ -7,12 +7,11 @@ pkgdesc="A package that aims to remplace Pimoroni's setup script for ARM Archlin
 arch=('armv6h' 'armv7h' 'aarch64')
 url="https://github.com/iomonad/hyperpixel-archlinux-arm"
 license=('MIT')
-depends=(python-evdev python-smbus-git)
+depends=(python-evdev) #smbus needed
 makedepends=(libbcm2835)
 conflicts=(hyperpixel) # from AUR
 install=install.sh
-md5sums=(SKIP)
-
+md5sums=('SKIP')
 
 build() {
   cd ${srcdir}/
