@@ -11,16 +11,15 @@ depends=(python-evdev) #smbus needed
 makedepends=(libbcm2835)
 conflicts=(hyperpixel) # from AUR
 install=install.sh
-md5sums=('SKIP')
 
 build() {
-  cd ${srcdir}/
+  cd ${srcdir}/../
 
   cc -o hyperpixel-init hyperpixel-init.c -lbcm2835 -pedantic
 }
 
 package() {
-  cd ${srcdir}/
+  cd ${srcdir}/../
 
   install -dm755 ${pkgdir}/boot/overlays
   install -dm755 ${pkgdir}/usr/bin
