@@ -27,7 +27,7 @@ package() {
   install -dm755 ${pkgdir}/usr/lib/systemd/system
 
   install -sm755 hyperpixel-init ${pkgdir}/usr/bin
-  install -m644 blobs//overlays/*.dtbo ${pkgdir}/boot/overlays
+  install -m644 blobs/overlays/*.dtbo ${pkgdir}/boot/overlays
   install -m755 binaries/hyperpixel-touch ${pkgdir}/usr/bin
   install -m644 systemd/*.service ${pkgdir}/usr/lib/systemd/system
 
